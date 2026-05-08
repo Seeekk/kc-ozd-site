@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Услуги — Кадровый центр ОЖД</title>
+  <meta name="description" content="Грузовые и пассажирские перевозки, длинномеры, сыпучие грузы. Полный спектр логистических услуг.">
+  <meta name="theme-color" content="#e31e24">
+  <link rel="canonical" href="https://example.github.io/kc-ozd-site/services.html">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page page--services" data-page="services">
+  <a class="skip-link" href="#main">Перейти к основному содержанию</a>
+  <header class="header" role="banner">
+    <div class="header__inner container">
+      <a class="header__logo" href="index.html" aria-label="Кадровый центр ОЖД — на главную">
+        <span class="header__logo-mark" aria-hidden="true"></span>
+        <span class="header__logo-text">КЦ ОЖД</span>
+      </a>
+      <button class="header__toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+        <span class="header__toggle-bar" aria-hidden="true"></span>
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <nav class="nav" id="site-nav" aria-label="Основная навигация">
+        <ul class="nav__list">
+          <li class="nav__item"><a class="nav__link" href="index.html">Главная</a></li>
+          <li class="nav__item"><a class="nav__link" href="about.html">О компании</a></li>
+          <li class="nav__item"><a class="nav__link nav__link--active" href="services.html">Услуги</a></li>
+          <li class="nav__item"><a class="nav__link" href="blog.html">Новости</a></li>
+          <li class="nav__item"><a class="nav__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <label class="search-field" aria-label="Поиск по сайту">
+          <span class="visually-hidden">Поиск</span>
+          <input class="search-field__input" type="search" name="site-search" placeholder="Поиск…" autocomplete="off" data-site-search>
+        </label>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="main--inner" tabindex="-1">
+    <header class="page-header container">
+      <h1 class="page-header__title">Услуги</h1>
+      <p class="page-header__lead">Подберём решение под тип груза, маршрут и сроки. Добавляйте услуги в избранное для быстрого доступа.</p>
+    </header>
+
+    <section class="section container" aria-labelledby="services-list-heading">
+      <h2 class="visually-hidden" id="services-list-heading">Каталог услуг</h2>
+      <ul class="service-cards" data-search-root>
+        <li class="service-cards__item" data-search-item data-favorite-id="svc-long" data-search-text="длинномерные грузы перевозка негабарит">
+          <article class="service-card">
+            <h3 class="service-card__title">Перевозка длинномерных грузов</h3>
+            <p class="service-card__text">Подбор подвижного состава, согласование маршрута и сопровождение.</p>
+            <button class="service-card__fav" type="button" data-favorite-toggle="svc-long" aria-pressed="false" aria-label="Добавить в избранное: длинномерные грузы">★</button>
+          </article>
+        </li>
+        <li class="service-cards__item" data-search-item data-favorite-id="svc-bulk" data-search-text="сыпучие инертные грузы самосвал">
+          <article class="service-card">
+            <h3 class="service-card__title">Перевозка инертных и сыпучих грузов</h3>
+            <p class="service-card__text">Спецтехника для массовых перевозок с контролем загрузки.</p>
+            <button class="service-card__fav" type="button" data-favorite-toggle="svc-bulk" aria-pressed="false" aria-label="Добавить в избранное: сыпучие грузы">★</button>
+          </article>
+        </li>
+        <li class="service-cards__item" data-search-item data-favorite-id="svc-pass" data-search-text="пассажирские перевозки автобус">
+          <article class="service-card">
+            <h3 class="service-card__title">Пассажирские перевозки</h3>
+            <p class="service-card__text">Корпоративные и регулярные маршруты, комфорт и безопасность.</p>
+            <button class="service-card__fav" type="button" data-favorite-toggle="svc-pass" aria-pressed="false" aria-label="Добавить в избранное: пассажирские перевозки">★</button>
+          </article>
+        </li>
+        <li class="service-cards__item" data-search-item data-favorite-id="svc-log" data-search-text="логистика склад доставка">
+          <article class="service-card">
+            <h3 class="service-card__title">Логистика и доставка</h3>
+            <p class="service-card__text">Маршрутизация, консолидация и мониторинг статуса.</p>
+            <button class="service-card__fav" type="button" data-favorite-toggle="svc-log" aria-pressed="false" aria-label="Добавить в избранное: логистика">★</button>
+          </article>
+        </li>
+      </ul>
+      <p class="search-empty" hidden data-search-empty role="status">Ничего не найдено. Измените запрос.</p>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <p class="footer__name">ООО «Кадровый центр ОЖД»</p>
+        <p class="footer__copy">© <span data-current-year></span> КЦ ОЖД. Все права защищены.</p>
+      </div>
+      <nav class="footer__nav" aria-label="Нижнее меню">
+        <a class="footer__link" href="contacts.html">Контакты</a>
+        <a class="footer__link" href="blog.html">Новости</a>
+        <button class="footer__link footer__link--button" type="button" data-modal-open="modal-disclosure">Раскрытие информации</button>
+      </nav>
+    </div>
+  </footer>
+
+  <div class="modal" id="modal-disclosure" role="dialog" aria-modal="true" aria-labelledby="modal-disclosure-title" hidden data-modal>
+    <div class="modal__backdrop" data-modal-close tabindex="-1"></div>
+    <div class="modal__dialog" role="document">
+      <button class="modal__close" type="button" data-modal-close aria-label="Закрыть окно"></button>
+      <h2 class="modal__title" id="modal-disclosure-title">Раскрытие информации</h2>
+      <p class="modal__text">Реквизиты и раскрываемая информация размещаются в соответствии с требованиями законодательства РФ. Для получения документов используйте контактную форму.</p>
+    </div>
+  </div>
+
+  <script type="module" src="js/script.js"></script>
+  <script defer src="js/analytics.js"></script>
+</body>
+</html>
