@@ -3,10 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>О компании — Кадровый центр ОЖД</title>
-  <meta name="description" content="История, миссия и структура ООО «Кадровый центр ОЖД». Надёжный партнёр в сфере транспорта и логистики.">
+  <title>Регистрация — Кадровый центр ОЖД</title>
+  <meta name="description" content="Создание учётной записи на демо-сайте. Требуется локальный сервер npm run server.">
   <meta name="theme-color" content="#e31e24">
-  <link rel="canonical" href="https://example.github.io/kc-ozd-site/about.html">
+  <meta name="api-base" content="">
+  <link rel="canonical" href="https://example.github.io/kc-ozd-site/register.html">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +15,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="page page--about" data-page="about">
+<body class="page page--register" data-page="register">
   <a class="skip-link" href="#main">Перейти к основному содержанию</a>
   <header class="header" role="banner">
     <div class="header__inner container">
@@ -29,13 +30,13 @@
       <nav class="nav" id="site-nav" aria-label="Основная навигация">
         <ul class="nav__list">
           <li class="nav__item"><a class="nav__link" href="index.html">Главная</a></li>
-          <li class="nav__item"><a class="nav__link nav__link--active" href="about.html">О компании</a></li>
+          <li class="nav__item"><a class="nav__link" href="about.html">О компании</a></li>
           <li class="nav__item"><a class="nav__link" href="services.html">Услуги</a></li>
           <li class="nav__item"><a class="nav__link" href="blog.html">Новости</a></li>
           <li class="nav__item"><a class="nav__link" href="favorites.html">Избранное</a></li>
           <li class="nav__item" data-auth-nav>
             <div data-auth-guest>
-              <a class="nav__link" href="login.html">Вход</a><span class="nav__auth-sep" aria-hidden="true"> · </span><a class="nav__link" href="register.html">Регистрация</a>
+              <a class="nav__link" href="login.html">Вход</a><span class="nav__auth-sep" aria-hidden="true"> · </span><a class="nav__link nav__link--active" href="register.html">Регистрация</a>
             </div>
             <div class="nav__auth-user" data-auth-user hidden>
               <span class="nav__auth-name" data-auth-name></span>
@@ -56,20 +57,37 @@
 
   <main id="main" class="main--inner" tabindex="-1">
     <header class="page-header container">
-      <h1 class="page-header__title">О компании</h1>
-      <p class="page-header__lead">Мы развиваем транспортные и логистические компетенции, опираясь на опыт работы с инфраструктурой ОЖД.</p>
+      <h1 class="page-header__title">Регистрация</h1>
+      <p class="page-header__lead">Учётная запись хранится в локальной базе SQLite при работе через <code class="inline-code">npm run server</code>. Имя пользователя — <strong>только буквы</strong>, без пробелов и цифр. Пароль: не короче 8 символов, с буквой и цифрой.</p>
     </header>
 
-    <section class="section container prose" aria-labelledby="about-mission">
-      <h2 id="about-mission">Миссия</h2>
-      <p>Обеспечивать заказчиков своевременными и безопасными перевозками, сочетая современный автопарк, диспетчеризацию и ответственность персонала в соответствии с <a class="link" href="https://gktgs.ru/assets/files/gost/gost-26653-2015-podgotovka-generalnyh-gruzov-k-transportirovaniyu-obshchie-trebovaniya.pdf#:~:text=%D0%9D%D0%B0%D1%81%D1%82%D0%BE%D1%8F%D1%89%D0%B8%D0%B9%20%D1%81%D1%82%D0%B0%D0%BD%D0%B4%D0%B0%D1%80%D1%82%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%B0%D0%B2%D0%BB%D0%B8%D0%B2%D0%B0%D0%B5%D1%82%20%D0%BE%D0%B1%D1%89%D0%B8%D0%B5%20%D1%82%D1%80%D0%B5%D0%B1%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D0%BE%20%D0%BF%D0%BE%D0%B4%D0%B3%D0%BE%D1%82%D0%BE%D0%B2%D0%BA%D0%B5%20%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D1%85,%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%BE%D0%B1%D0%B8%D0%BB%D1%8C%D0%BD%D1%8B%D0%BC%2C%20%D0%B2%D0%BE%D0%B7%D0%B4%D1%83%D1%88%D0%BD%D1%8B%D0%BC%2C%20%D0%B6%D0%B5%D0%BB%D0%B5%D0%B7%D0%BD%D0%BE%D0%B4%D0%BE%20%D1%80%D0%BE%D0%B6%D0%BD%D1%8B%D0%BC%2C%20%D0%BC%D0%BE%D1%80%D1%81%D0%BA%D0%B8%D0%BC%20%D0%B8%20%D1%80%D0%B5%D1%87%D0%BD%D1%8B%D0%BC%20%D1%82%D1%80%D0%B0%D0%BD%D1%81%D0%BF%D0%BE%D1%80%D1%82%D0%BE%D0%BC." target="_blank" rel="noopener noreferrer">ГОСТ 26653-2015</a>.</p>
-      <h2>История и направление</h2>
-      <p>Компания сформирована 22 июня 2007 года в качестве дочерней компании ООО"РЖД" для комплексного обслуживания перевозочного процесса в регионе присутствия Октябрьской железной дороги и за его пределами. С течением временни организация на фоне коммерческого успеха приняла решение о сотрудничестве с сторонними фирмами и частными лицами.</p>
-      <h2>Органы управления и структура</h2>
-      <p>Управление компанией осуществляется в соответствии с корпоративными процедурами. Структурные подразделения представлены в ключевых регионах Северо-Запада и Московской области.
-  
-      </p>
-      <p><a class="link" href="contacts.html">Связаться с представительством</a></p>
+    <section class="section container section--tight" aria-labelledby="register-form-heading">
+      <h2 class="visually-hidden" id="register-form-heading">Форма регистрации</h2>
+      <form class="form" id="register-form" novalidate data-register-form>
+        <p class="form__status" role="status" aria-live="polite" data-form-status></p>
+        <div class="form__row">
+          <label class="form__label" for="reg-name">Имя <span aria-hidden="true">*</span></label>
+          <input class="form__input" id="reg-name" name="display_name" type="text" required maxlength="80" autocomplete="username" aria-required="true">
+          <span class="form__error" id="reg-name-error" data-field-error="display_name"></span>
+        </div>
+        <div class="form__row">
+          <label class="form__label" for="reg-email">E-mail <span aria-hidden="true">*</span></label>
+          <input class="form__input" id="reg-email" name="email" type="email" required maxlength="254" autocomplete="email" aria-required="true">
+          <span class="form__error" id="reg-email-error" data-field-error="email"></span>
+        </div>
+        <div class="form__row">
+          <label class="form__label" for="reg-password">Пароль <span aria-hidden="true">*</span></label>
+          <input class="form__input" id="reg-password" name="password" type="password" required minlength="8" maxlength="128" autocomplete="new-password" aria-required="true">
+          <span class="form__error" id="reg-password-error" data-field-error="password"></span>
+        </div>
+        <div class="form__row">
+          <label class="form__label" for="reg-password2">Повтор пароля <span aria-hidden="true">*</span></label>
+          <input class="form__input" id="reg-password2" name="password_confirm" type="password" required minlength="8" maxlength="128" autocomplete="new-password" aria-required="true">
+          <span class="form__error" id="reg-password2-error" data-field-error="password_confirm"></span>
+        </div>
+        <button class="button button--primary" type="submit">Зарегистрироваться</button>
+        <p class="form__hint">Уже есть аккаунт? <a class="link" href="login.html">Войти</a></p>
+      </form>
     </section>
   </main>
 
@@ -80,8 +98,8 @@
         <p class="footer__copy">© <span data-current-year></span> КЦ ОЖД. Все права защищены.</p>
       </div>
       <nav class="footer__nav" aria-label="Нижнее меню">
-        <a class="footer__link" href="services.html">Услуги</a>
-        <a class="footer__link" href="blog.html">Новости</a>
+        <a class="footer__link" href="contacts.html">Контакты</a>
+        <a class="footer__link" href="login.html">Вход</a>
         <button class="footer__link footer__link--button" type="button" data-modal-open="modal-disclosure">Раскрытие информации</button>
       </nav>
     </div>

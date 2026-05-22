@@ -49,3 +49,35 @@ export function validateRequiredText(value, maxLen) {
 export function validatePersonName(name) {
   return validateRequiredText(name, 120);
 }
+
+/**
+ * Имя пользователя (регистрация): только буквы (любой алфавит Unicode), длина 2–80.
+ * @param {string} value
+ * @returns {boolean}
+ */
+export function validateDisplayName(value) {
+  var v = String(value || '').trim();
+  if (v.length < 2 || v.length > 80) {
+    return false;
+  }
+  return /^\p{L}+$/u.test(v);
+}
+
+/**
+ * Пароль: 8–128 символов, минимум одна буква (латиница или кириллица) и одна цифра.
+ * @param {string} value
+ * @returns {boolean}
+ */
+export function validatePassword(value) {
+  var v = String(value || '');
+  if (v.length < 8 || v.length > 128) {
+    return false;
+  }
+  if (!/[a-zA-Zа-яА-ЯёЁ]/.test(v)) {
+    return false;
+  }
+  if (!/\d/.test(v)) {
+    return false;
+  }
+  return true;
+}

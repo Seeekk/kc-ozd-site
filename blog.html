@@ -32,6 +32,16 @@
           <li class="nav__item"><a class="nav__link" href="about.html">О компании</a></li>
           <li class="nav__item"><a class="nav__link" href="services.html">Услуги</a></li>
           <li class="nav__item"><a class="nav__link nav__link--active" href="blog.html">Новости</a></li>
+          <li class="nav__item"><a class="nav__link" href="favorites.html">Избранное</a></li>
+          <li class="nav__item" data-auth-nav>
+            <div data-auth-guest>
+              <a class="nav__link" href="login.html">Вход</a><span class="nav__auth-sep" aria-hidden="true"> · </span><a class="nav__link" href="register.html">Регистрация</a>
+            </div>
+            <div class="nav__auth-user" data-auth-user hidden>
+              <span class="nav__auth-name" data-auth-name></span>
+              <button type="button" class="button button--ghost nav__auth-logout" data-auth-logout>Выйти</button>
+            </div>
+          </li>
           <li class="nav__item"><a class="nav__link" href="contacts.html">Контакты</a></li>
         </ul>
       </nav>
@@ -53,25 +63,25 @@
     <section class="section container" aria-labelledby="blog-list-heading">
       <h2 class="visually-hidden" id="blog-list-heading">Лента новостей</h2>
       <ul class="blog-list" data-search-root>
-        <li class="blog-list__item" data-search-item data-favorite-id="news-1" data-search-text="федеральные трассы паводок регионы центральный северо-запад">
+        <li class="blog-list__item" id="fav-news-1" data-search-item data-favorite-id="news-1" data-search-text="федеральные трассы паводок регионы центральный северо-запад">
           <article class="blog-card">
-            <time class="blog-card__date" datetime="2019-03-17">17.03.2019</time>
+            <time class="blog-card__date" datetime="2026-04-17">17.04.2026</time>
             <h3 class="blog-card__title">Федеральные трассы 13 регионов готовят к весеннему паводку</h3>
             <p class="blog-card__excerpt">Комплекс мер по устойчивости дорожной сети в период паводковых вод.</p>
             <button class="blog-card__fav" type="button" data-favorite-toggle="news-1" aria-pressed="false" aria-label="В избранное: трассы и паводок">★</button>
           </article>
         </li>
-        <li class="blog-list__item" data-search-item data-favorite-id="news-2" data-search-text="путепровод реконструкция а-120 ленобласть">
+        <li class="blog-list__item" id="fav-news-2" data-search-item data-favorite-id="news-2" data-search-text="путепровод реконструкция а-120 ленобласть">
           <article class="blog-card">
-            <time class="blog-card__date" datetime="2019-03-06">06.03.2019</time>
+            <time class="blog-card__date" datetime="2026-05-06">06.05.2026</time>
             <h3 class="blog-card__title">Реконструкция путепровода на А-120 в Ленобласти</h3>
             <p class="blog-card__excerpt">Завершение работ повысит пропускную способность и безопасность участка.</p>
             <button class="blog-card__fav" type="button" data-favorite-toggle="news-2" aria-pressed="false" aria-label="В избранное: путепровод А-120">★</button>
           </article>
         </li>
-        <li class="blog-list__item" data-search-item data-favorite-id="news-3" data-search-text="трассы северо-запад обновление километры">
+        <li class="blog-list__item" id="fav-news-3" data-search-item data-favorite-id="news-3" data-search-text="трассы северо-запад обновление километры">
           <article class="blog-card">
-            <time class="blog-card__date" datetime="2019-02-28">28.02.2019</time>
+            <time class="blog-card__date" datetime="2026-03-28">28.03.2026</time>
             <h3 class="blog-card__title">Более 250 км трасс обновят в четырёх регионах Северо-Запада</h3>
             <p class="blog-card__excerpt">План модернизации покрытия и организации движения на ключевых направлениях.</p>
             <button class="blog-card__fav" type="button" data-favorite-toggle="news-3" aria-pressed="false" aria-label="В избранное: обновление трасс">★</button>

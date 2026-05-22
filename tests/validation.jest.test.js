@@ -1,5 +1,5 @@
 import { describe, test, expect } from '@jest/globals';
-import { validateEmail, validatePhoneOptional, validatePersonName, validateRequiredText } from '../js/modules/validation.js';
+import { validateEmail, validatePhoneOptional, validatePersonName, validateRequiredText, validatePassword, validateDisplayName } from '../js/modules/validation.js';
 
 describe('validation', () => {
   test('validateEmail accepts common form', () => {
@@ -21,5 +21,17 @@ describe('validation', () => {
   test('validateRequiredText', () => {
     expect(validateRequiredText('ok', 10)).toBe(true);
     expect(validateRequiredText('', 10)).toBe(false);
+  });
+  test('validatePassword', () => {
+    expect(validatePassword('Password1')).toBe(true);
+    expect(validatePassword('nodigits')).toBe(false);
+    expect(validatePassword('12345678')).toBe(false);
+  });
+  test('validateDisplayName', () => {
+    expect(validateDisplayName('Мария')).toBe(true);
+    expect(validateDisplayName('Ivan')).toBe(true);
+    expect(validateDisplayName('x')).toBe(false);
+    expect(validateDisplayName('Иван1')).toBe(false);
+    expect(validateDisplayName('Иван Петр')).toBe(false);
   });
 });

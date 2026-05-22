@@ -4,6 +4,7 @@ import os from 'os';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { openDatabase, insertContactSubmission } from './db.js';
+import { mountAuthRoutes } from './auth-routes.js';
 import { stripAndTruncate } from './sanitize.js';
 import {
   validateEmail,
@@ -82,6 +83,13 @@ async function main() {
     legacyHeaders: false,
   });
 
+  var authLimiter = rateLimit({
+    windowMs: 15 * 60 * 1000,
+    max: 60,
+    standardHeaders: true,
+    legacyHeaders: false,
+  });
+
   app.post('/api/contact', contactLimiter, function (req, res) {
     var body = req.body && typeof req.body === 'object' ? req.body : {};
     var name = stripAndTruncate(body.name, 120);
@@ -118,6 +126,8 @@ async function main() {
   app.get('/api/health', function (_req, res) {
     res.json({ ok: true, db: true });
   });
+
+  mountAuthRoutes(app, db, authLimiter);
 
   app.use(express.static(root));
 

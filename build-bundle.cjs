@@ -7,6 +7,8 @@ const wireframe = `# Структура сайта (по мотивам kc-ozd.r
 - **about.html** — о компании
 - **services.html** — услуги, поиск, избранное (localStorage)
 - **blog.html** — новости, поиск, избранное
+- **favorites.html** — список избранного из localStorage
+- **login.html** / **register.html** — вход и регистрация (API при `npm run server`)
 - **contacts.html** — регионы, форма с валидацией и DOMPurify
 
 ## Общие блоки
@@ -30,6 +32,9 @@ const files = {
   'about.html': read('about.html'),
   'services.html': read('services.html'),
   'blog.html': read('blog.html'),
+  'favorites.html': read('favorites.html'),
+  'login.html': read('login.html'),
+  'register.html': read('register.html'),
   'contacts.html': read('contacts.html'),
   'css/style.css': read('css/style.css'),
   'js/script.js': read('js/script.js'),
